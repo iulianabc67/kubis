@@ -23,6 +23,6 @@ class SearchController extends Controller
             }
         }
 
-        return view('search', ['results' => $results, 'json' => $json]);
+        return view('search', ['needle' => $needle, 'results' => $results, 'json' => $json]);
     }
 }
