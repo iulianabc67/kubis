@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Tailwind CSS -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>Search Result</title>
+    <title>Search result for "{{ $needle }}"</title>
 </head>
 
 <body class="bg-gray-500">
+
+    @include('layouts.nav')
 
     <div class="p-2 md:p-10 grid grid-cols-1 gap-5">
         <a href="{{ URL::to('categories/' . 'Hoodies & Sweatshirts') }}"
@@ -25,15 +27,24 @@
     </div>
 
     @if(empty($results))
-        <div class="px-4 md:px-48">
-        @include('layouts.search')
-        </div>
-        
+                
         @include('layouts.list-products')
         
     @endif
 
     @include('layouts.list-search-results')
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("burger");
+            element.classList.toggle("block");
+            element.classList.toggle("hidden");
+        }
+
+    </script>
+
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js'></script>
 
 </body>
 

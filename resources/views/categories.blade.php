@@ -11,6 +11,8 @@
 
 <body class="bg-gray-500">
 
+    @include('layouts.nav')
+
     <div class="p-2 md:p-10 grid grid-cols-1 gap-5">
         <a href="{{ URL::to('categories/' . 'Hoodies & Sweatshirts') }}"
             class="text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
@@ -66,6 +68,18 @@
             @endforeach
         @endforeach
     </div>
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("burger");
+            element.classList.toggle("block");
+            element.classList.toggle("hidden");
+        }
+
+    </script>
+
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js'></script>
 
 </body>
 

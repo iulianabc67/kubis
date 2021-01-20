@@ -10,23 +10,22 @@
 </head>
 
 <body class="bg-gray-500">
-    <div class="p-2 md:p-10 md:pb-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-        <span class="text-center inline-block bg-indigo-600 rounded-full px-3 py-1 text-md font-semibold text-white mr-2 mb-2">Categories:
-        </span>
-        <a href="{{ URL::to('categories/' . 'Hoodies & Sweatshirts') }}"
-            class="text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #Hoodies & Sweatshirts
-        </a>
-        <a href="{{ URL::to('categories/' . 'Eco Friendly') }}"
-            class="text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #Eco Friendly
-        </a>
-        
-        @include('layouts.search')
 
-    </div>
+    @include('layouts.nav')
     
     @include('layouts.list-products')
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("burger");
+            element.classList.toggle("block");
+            element.classList.toggle("hidden");
+        }
+
+    </script>
+
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js'></script>
 
 </body>
 

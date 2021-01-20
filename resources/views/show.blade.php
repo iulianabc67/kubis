@@ -7,17 +7,17 @@
     <title>{{ $item->name }}</title>
     <!-- Tailwind CSS -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    {{-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css'> --}}
+    {{--
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css'>
+    --}}
 </head>
 
 <body class="bg-gray-500">
 
-    <div class="p-2 md:p-10">
-        @include('layouts.search')
-    </div>
+    @include('layouts.nav')
 
     <div class="py-6">
-        
+
         @include('layouts.breadcrumbs')
 
         <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 mt-6">
@@ -91,8 +91,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("burger");
+            element.classList.toggle("block");
+            element.classList.toggle("hidden");
+        }
+
+    </script>
+
     <!-- partial -->
     <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js'></script>
+
 </body>
 
 </html>
